@@ -86,8 +86,8 @@ class UserController extends Controller
         ]);
         $user = User::find($id);
         $user->update([
-            'Name' => request('name'),
-            'Email' => request('email'),
+            'name' => request('name'),
+            'email' => request('email'),
         ]);
     
         return response()->json(['Success' => $user]);
