@@ -20,8 +20,8 @@ class UserController extends Controller
     public function login(Request $request) {
         $data =$request->input();
         $password = $request->input('password');
-        $user = User::where('Email', $data['email'])->first();
-        $userPass = User::where('Password',$password)->first();
+        $user = User::where('email', $data['email'])->first();
+        $userPass = User::where('password',$password)->first();
     
         if($user && $userPass){
         $request->session()-> put('users', $data['email'],);
