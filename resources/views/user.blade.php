@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>API TASK</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>User API</title>
+<!-- bootstrap css link -->  
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
 <style>
   * {
     padding: 0;
@@ -11,9 +13,9 @@
 }
            
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f2f5;
-    color: #1c1e21;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: wheat;
+    color:red ;
 }
 
 main {
@@ -68,7 +70,7 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
     padding: 20px;
-    max-width: 400px;
+    max-width: 200px;
 }
 
 .colm-form .form-container input, .colm-form .form-container .btn-login {
@@ -188,9 +190,9 @@ footer small {
 </style>
 </head>
 <body>
-<nav class="navbar navbar-light navbar-expand-lg mb-5" style="background-color: #e3f2fd;">
+<nav class="navbar navbar-info navbar-expand-lg mb-5" >
 <div class="container">
-<a class="navbar-brand mr-auto" href="#">Simple User API</a>
+<a class="navbar-brand mr-auto" href="#">User API</a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
@@ -201,9 +203,7 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 <li class="nav-item">
 <a class="nav-link" href="{{ url('/api/log') }}">Login</a>
 </li>
-<!-- <li class="nav-item">
-<a class="nav-link" href="{{ url('api/user')}}">GET User</a>
-</li> -->
+
 <li class="nav-item">
 <a class="nav-link" href="{{ url('api/users')}}">Get all Users</a>
 </li>
@@ -246,8 +246,8 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 @enderror
               </div>
 
-              <div class="form-group">
-                <button class="btn btn-primary">Register</button>
+              <div class="form-group m-5">
+                <button class="btn btn-success">Register</button>
               </div>
             </form>
 </body>

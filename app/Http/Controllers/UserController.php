@@ -11,6 +11,33 @@ use App\Models\users;
 
 class UserController extends Controller
 {
+
+    public function loginstatus()
+    {
+        return view('/login');
+     
+    } 
+    public function login(Request $request) {
+        $data =$request->input();
+        $password = $request->input('password');
+        $user = User::where('Email', $data['email'])->first();
+        $userPass = User::where('Password',$password)->first();
+    
+        if($user && $userPass){
+        $request->session()-> put('users', $data['email'],);
+        return response()->json([ session('users') => "Successfully login"]);
+        
+        }
+        else {
+            echo " <script>alert('Password or Email do not match any user');
+        window.location='/api/log';
+    </script>";
+        }
+    }
+
+
+
+
      public function register(Request $request)
      {
         // dd($request ->all());
@@ -79,12 +106,7 @@ class UserController extends Controller
         return response()->json(['Successfully deleted' => $user]);
        }
     
-    //    public function getUsers(){
-       
-    //     $users = User::all();
-    
-    //     return view('users',['users'=>$users]);
-    // }
+   
     public function getUsers()
     {
         $all = User::all();

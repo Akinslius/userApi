@@ -63,9 +63,9 @@
     
   </tbody>
 </table>
-<div class="text-center">
+<!-- <div class="text-center">
 <a href="/createuser" class="btn btn-secondary">Create User</a>
-</div>
+</div> -->
 <div class="">
 <a href="/" class="btn btn-primary">Home</a>
 </div>
