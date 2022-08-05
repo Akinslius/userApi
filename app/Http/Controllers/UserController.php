@@ -81,8 +81,8 @@ class UserController extends Controller
       public function updateUser(User $request, $id){
     
         $request->replicate([
-            'Name' => 'required',
-            'Email' => 'required',
+            'name' => 'required',
+            'email' => 'required',
         ]);
         $user = User::find($id);
         $user->update([
