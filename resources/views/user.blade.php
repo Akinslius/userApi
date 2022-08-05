@@ -14,8 +14,10 @@
            
 body {
     font-family:Georgia, 'Times New Roman', Times, serif;
-    background-color: wheat;
+    background-color: blue;
     color:red ;
+    margin: 100px;
+    padding: 20px;
 }
 
 main {
